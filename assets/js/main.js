@@ -19,7 +19,7 @@
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
-  document.addEventListener('scroll', toggleScrolled);
+  window.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
   /**
@@ -89,14 +89,14 @@
   });
 
   window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  window.addEventListener('scroll', toggleScrollTop);
 
   /**
    * Animation on scroll function and init
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 800,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -138,7 +138,7 @@
   skillsAnimation.forEach((item) => {
     new Waypoint({
       element: item,
-      offset: '80%',
+      offset: '95%',
       handler: function(direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
@@ -210,7 +210,7 @@
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
       let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight +200)) {
         document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
         navmenulink.classList.add('active');
       } else {
@@ -219,6 +219,6 @@
     })
   }
   window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
+  window.addEventListener('scroll', navmenuScrollspy);
 
 })();
