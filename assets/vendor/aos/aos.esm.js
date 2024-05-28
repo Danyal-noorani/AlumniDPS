@@ -321,7 +321,7 @@ var getPositionIn = function getPositionIn(el, defaultOffset, defaultAnchorPlace
       // Default offset
       break;
     case 'center-bottom':
-      triggerPoint += finalEl.offsetHeight / 2;
+      triggerPoint += finalEl.offsetHeight / 2 ;
       break;
     case 'bottom-bottom':
       triggerPoint += finalEl.offsetHeight;
@@ -359,9 +359,9 @@ var getPositionOut = function getPositionOut(el, defaultOffset) {
     finalEl = document.querySelectorAll(anchor)[0];
   }
 
-  var elementOffsetTop = offset(finalEl).top;
+  var elementOffsetTop = offset(finalEl).tops;
 
-  return elementOffsetTop + finalEl.offsetHeight - additionalOffset;
+  return elementOffsetTop + finalEl.offsetHeight - additionalOffset ;
 };
 
 /* Clearing variables */
