@@ -1170,7 +1170,9 @@ section,
 }
 
 .skills .progress {
-  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 12rem;
   display: block;
   background: none;
   border-radius: 0;

@@ -242,7 +242,7 @@ var applyClasses = function applyClasses(el, top) {
  */
 var handleScroll = function handleScroll($elements) {
   return $elements.forEach(function (el, i) {
-    return applyClasses(el, window.pageYOffset);
+    return applyClasses(el, window.scrollY);
   });
 };
 
@@ -303,7 +303,7 @@ var getInlineOption = (function (el, key, fallback) {
  */
 
 var getPositionIn = function getPositionIn(el, defaultOffset, defaultAnchorPlacement) {
-  var windowHeight = window.innerHeight;
+  var windowHeight = window.innerHeight ;
   var anchor = getInlineOption(el, 'anchor');
   var inlineAnchorPlacement = getInlineOption(el, 'anchor-placement');
   var additionalOffset = Number(getInlineOption(el, 'offset', inlineAnchorPlacement ? 0 : defaultOffset));
